@@ -1,6 +1,6 @@
 {
   "name": "Casamento Hygor & Mirelly",
-  "short_name": "Hygor & Mirelly",
+  "short_name": "M+H",
   "description": "Site do Casamento de Hygor & Mirelly",
   "icons": [
     {
@@ -14,8 +14,8 @@
       "type": "image/png"
     }
   ],
-  "theme_color": "#ECECED",
-  "background_color": "#ECECED",
+  "theme_color": "#000000",
+  "background_color": "#000000",
   "display": "standalone",
   "start_url": "/"
 }

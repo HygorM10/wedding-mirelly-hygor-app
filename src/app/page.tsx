@@ -1,28 +1,38 @@
+import Footer from "@/components/Footer";
+import Header from "@/components/Header";
 import Image from "next/image";
 import styles from "./page.module.css";
 
 export default function Home() {
   return (
-    <div className={styles.page}>
-      <main className={styles.main}>
-        <Image
-          className={styles.logo}
-          src="/logo_full_2.png"
-          alt="Logo"
-          width={400}
-          height={200}
-          priority
-        />
-        <h1 className={styles.names}>Mirelly & Hygor</h1>
-        <p className={styles.subtitle}>Aguardem...</p>
-        <Image
-          className={styles.mainImage}
-          src="/main-principal.jpeg"
-          alt="Nossa Foto Principal"
-          width={1920}
-          height={1080}
-        />
-      </main>
-    </div>
+    <>
+      <Header />
+      <div className={styles.page}>
+        <main className={styles.main}>
+          <div className={styles.heroSection}>
+            <div className={styles.heroContent}>
+              <p className={styles.date}>Aguardem...</p>
+              <h1 className={styles.names}>
+                MIRELLY &<br />HYGOR
+              </h1>
+              <p className={styles.verse}>
+                "Para que todos vejam, e saibam, e considerem, e juntamente entendam que a mão do Senhor fez isso." - Isaías 41:20
+              </p>
+            </div>
+            <div className={styles.heroImageContainer}>
+              <Image
+                className={styles.heroImage}
+                src="/main-principal.jpeg"
+                alt="Mirelly e Hygor"
+                fill
+                priority
+                style={{ objectFit: 'contain' }}
+              />
+            </div>
+          </div>
+        </main>
+      </div>
+      <Footer />
+    </>
   );
 }
