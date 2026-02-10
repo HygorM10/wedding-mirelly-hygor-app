@@ -19,6 +19,23 @@ const playfair = Playfair_Display({
 export const metadata: Metadata = {
   title: "Mirelly & Hygor",
   description: "Site do Casamento de Mirelly & Hygor",
+  metadataBase: new URL('https://www.mirellyehygor.com.br'),
+  openGraph: {
+    title: "Mirelly & Hygor",
+    description: "Site do Casamento de Mirelly & Hygor",
+    url: 'https://www.mirellyehygor.com.br',
+    siteName: 'Mirelly & Hygor',
+    images: [
+      {
+        url: '/main-principal.jpeg',
+        width: 1200,
+        height: 630,
+        alt: 'Mirelly e Hygor',
+      },
+    ],
+    locale: 'pt_BR',
+    type: 'website',
+  },
   icons: {
     icon: [
       { url: '/favicon.ico', sizes: 'any' },
