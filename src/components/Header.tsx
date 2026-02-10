@@ -31,16 +31,16 @@ export default function Header() {
         </Link>
         
         <nav className={styles.nav}>
-          <Link href="#confirmar-presenca" className={styles.navLink}>
+          <Link href="/evento" className={styles.navLink}>
             O EVENTO
           </Link>
           {/* <Link href="#lista-presentes" className={styles.navLink}>
             LISTA DE PRESENTES
           </Link> */}
-          <Link href="#evento" className={styles.navLink}>
+          <Link href="/historia" className={styles.navLink}>
             HISTÓRIA DO CASAL
           </Link>
-          <Link href="#historia" className={styles.navLink}>
+          <Link href="/galeria" className={styles.navLink}>
             GALERIA 
           </Link>
           {/* <Link href="#galeria" className={styles.navLink}>
@@ -60,13 +60,13 @@ export default function Header() {
 
         <div className={`${styles.mobileMenu} ${isMenuOpen ? styles.mobileMenuOpen : ''}`}>
           <nav className={styles.mobileNav}>
-            <Link href="#confirmar-presenca" className={styles.mobileNavLink} onClick={closeMenu}>
+            <Link href="/evento" className={styles.mobileNavLink} onClick={closeMenu}>
               O EVENTO
             </Link>
-            <Link href="#evento" className={styles.mobileNavLink} onClick={closeMenu}>
+            <Link href="/historia" className={styles.mobileNavLink} onClick={closeMenu}>
               HISTÓRIA DO CASAL
             </Link>
-            <Link href="#historia" className={styles.mobileNavLink} onClick={closeMenu}>
+            <Link href="/galeria" className={styles.mobileNavLink} onClick={closeMenu}>
               GALERIA
             </Link>
           </nav>

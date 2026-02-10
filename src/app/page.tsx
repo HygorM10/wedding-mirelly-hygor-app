@@ -26,6 +26,7 @@ export default function Home() {
                 alt="Mirelly e Hygor"
                 fill
                 priority
+                sizes="(max-width: 768px) 100vw, 50vw"
                 style={{ objectFit: 'contain' }}
               />
             </div>
