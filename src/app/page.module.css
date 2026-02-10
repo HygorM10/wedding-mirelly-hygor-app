@@ -113,7 +113,9 @@
   
   .heroContent {
     padding: 3rem 2rem;
-    min-height: 60vh;
+    min-height: 35vh;
+    text-align: center;
+    align-items: center;
   }
   
   .heroContent::after {
@@ -133,14 +135,20 @@
     font-size: 2.5rem;
   }
   
+  .verse {
+    padding-right: 0;
+    margin: 0 auto;
+  }
+  
   .heroImageContainer {
-    min-height: 60vh;
+    min-height: 35vh;
   }
 }
 
 @media (max-width: 480px) {
   .heroContent {
     padding: 2rem 1.5rem;
+    text-align: center;
   }
   
   .names {
