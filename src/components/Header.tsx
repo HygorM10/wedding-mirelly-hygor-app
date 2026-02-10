@@ -3,8 +3,19 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import styles from './Header.module.css';
+import { useState } from 'react';
 
 export default function Header() {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+  const toggleMenu = () => {
+    setIsMenuOpen(!isMenuOpen);
+  };
+
+  const closeMenu = () => {
+    setIsMenuOpen(false);
+  };
+
   return (
     <header className={styles.header}>
       <div className={styles.container}>
@@ -36,6 +47,30 @@ export default function Header() {
             CONFIRMAR PRESENÇA
           </Link> */}
         </nav>
+
+        <button 
+          className={styles.menuButton} 
+          onClick={toggleMenu}
+          aria-label="Menu"
+        >
+          <span className={styles.menuIcon}></span>
+          <span className={styles.menuIcon}></span>
+          <span className={styles.menuIcon}></span>
+        </button>
+
+        <div className={`${styles.mobileMenu} ${isMenuOpen ? styles.mobileMenuOpen : ''}`}>
+          <nav className={styles.mobileNav}>
+            <Link href="#confirmar-presenca" className={styles.mobileNavLink} onClick={closeMenu}>
+              O EVENTO
+            </Link>
+            <Link href="#evento" className={styles.mobileNavLink} onClick={closeMenu}>
+              HISTÓRIA DO CASAL
+            </Link>
+            <Link href="#historia" className={styles.mobileNavLink} onClick={closeMenu}>
+              GALERIA
+            </Link>
+          </nav>
+        </div>
 
         {/* <Link href="#confirmar-presenca" className={styles.ctaButton}>
           PRESENÇA

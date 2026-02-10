@@ -134,7 +134,7 @@
   }
   
   .heroImageContainer {
-    min-height: 40vh;
+    min-height: 60vh;
   }
 }
 
@@ -153,5 +153,9 @@
   
   .verse {
     font-size: 0.75rem;
+  }
+  
+  .heroImageContainer {
+    min-height: 50vh;
   }
 }
