@@ -1,0 +1,316 @@
+.page {
+  min-height: 100vh;
+  background: #000;
+  padding-top: 80px;
+}
+
+.main {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 4rem 2rem 6rem;
+}
+
+/* ── Título ── */
+.titleSection {
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+.title {
+  font-family: var(--font-playfair);
+  font-size: 3.2rem;
+  font-weight: 400;
+  letter-spacing: 0.08em;
+  color: #fff;
+  margin-bottom: 1.5rem;
+}
+
+/* Separador decorativo */
+.separator {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  margin: 0 auto;
+  max-width: 340px;
+}
+
+.separatorLine {
+  flex: 1;
+  height: 1px;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(193, 154, 107, 0.6),
+    rgba(193, 154, 107, 0.9)
+  );
+}
+
+.separatorLine:last-child {
+  background: linear-gradient(
+    90deg,
+    rgba(193, 154, 107, 0.9),
+    rgba(193, 154, 107, 0.6),
+    transparent
+  );
+}
+
+.separatorIcon {
+  font-size: 1.1rem;
+  color: rgba(193, 154, 107, 0.85);
+  line-height: 1;
+}
+
+/* ── Imagem ── */
+.imageWrapper {
+  position: relative;
+  width: 100%;
+  margin: 0;
+  margin: 0 auto;
+  min-height: 500px;
+  border-radius: 6px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Moldura externa decorativa */
+.imageFrame {
+  position: relative;
+  max-width: 780px;
+  margin: 0 auto 4rem;
+  padding: 12px;
+  border: 1px solid rgba(193, 154, 107, 0.25);
+  border-radius: 4px;
+  background: rgba(193, 154, 107, 0.03);
+}
+
+.imageFrame::before,
+.imageFrame::after {
+  content: '';
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  border-color: rgba(193, 154, 107, 0.5);
+  border-style: solid;
+  pointer-events: none;
+}
+
+.imageFrame::before {
+  top: 8px;
+  left: 8px;
+  border-width: 1px 0 0 1px;
+}
+
+.imageFrame::after {
+  bottom: 8px;
+  right: 8px;
+  border-width: 0 1px 1px 0;
+}
+
+.cornerTopRight,
+.cornerBottomLeft {
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  border-color: rgba(193, 154, 107, 0.5);
+  border-style: solid;
+  pointer-events: none;
+}
+
+.cornerTopRight {
+  top: 8px;
+  right: 8px;
+  border-width: 1px 1px 0 0;
+}
+
+.cornerBottomLeft {
+  bottom: 8px;
+  left: 8px;
+  border-width: 0 0 1px 1px;
+}
+
+.image {
+  filter: grayscale(30%) contrast(1.05) brightness(0.95);
+  transition: filter 0.6s ease;
+  object-fit: contain;
+  border-radius: 6px;
+}
+
+.imageWrapper:hover .image {
+  filter: grayscale(0%) contrast(1) brightness(1);
+}
+
+/* ── Quadro de texto ── */
+.storyFrame {
+  position: relative;
+  max-width: 780px;
+  margin: 0 auto;
+  padding: 3rem 3.5rem;
+  border: 1px solid rgba(193, 154, 107, 0.25);
+  border-radius: 4px;
+  background: rgba(193, 154, 107, 0.03);
+}
+
+/* Cantos decorativos do quadro */
+.storyFrame::before,
+.storyFrame::after {
+  content: '';
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  border-color: rgba(193, 154, 107, 0.5);
+  border-style: solid;
+  pointer-events: none;
+}
+
+.storyFrame::before {
+  top: 8px;
+  left: 8px;
+  border-width: 1px 0 0 1px;
+}
+
+.storyFrame::after {
+  bottom: 8px;
+  right: 8px;
+  border-width: 0 1px 1px 0;
+}
+
+.storyCornerTopRight,
+.storyCornerBottomLeft {
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  border-color: rgba(193, 154, 107, 0.5);
+  border-style: solid;
+  pointer-events: none;
+}
+
+.storyCornerTopRight {
+  top: 8px;
+  right: 8px;
+  border-width: 1px 1px 0 0;
+}
+
+.storyCornerBottomLeft {
+  bottom: 8px;
+  left: 8px;
+  border-width: 0 0 1px 1px;
+}
+
+/* Ornamento superior */
+.storyOrnament {
+  text-align: center;
+  margin-bottom: 1.8rem;
+  font-size: 1.4rem;
+  color: rgba(193, 154, 107, 0.6);
+  letter-spacing: 0.5em;
+  line-height: 1;
+}
+
+.storyText {
+  font-family: var(--font-playfair);
+  font-size: 1.05rem;
+  font-weight: 400;
+  line-height: 2;
+  color: rgba(255, 255, 255, 0.82);
+  text-align: center;
+  letter-spacing: 0.01em;
+}
+
+.storyText p {
+  margin-bottom: 1.5rem;
+}
+
+.storyText p:last-child {
+  margin-bottom: 0;
+}
+
+/* Ornamento inferior */
+.storyOrnamentBottom {
+  text-align: center;
+  margin-top: 1.8rem;
+  font-size: 1.4rem;
+  color: rgba(193, 154, 107, 0.6);
+  letter-spacing: 0.5em;
+  line-height: 1;
+}
+
+/* ── Responsive ── */
+@media (max-width: 768px) {
+  .main {
+    padding: 2.5rem 1.2rem 4rem;
+  }
+
+  .title {
+    font-size: 2.2rem;
+  }
+
+  .storyFrame {
+    padding: 2rem 1.5rem;
+  }
+
+  .storyText {
+    font-size: 0.95rem;
+    line-height: 1.9;
+  }
+
+  .imageFrame {
+    padding: 8px;
+  }
+
+  .imageWrapper {
+    min-height: 400px;
+  }
+
+  .storyFrame::before {
+    top: 6px;
+    left: 6px;
+    width: 28px;
+    height: 28px;
+  }
+
+  .storyFrame::after {
+    bottom: 6px;
+    right: 6px;
+    width: 28px;
+    height: 28px;
+  }
+
+  .storyCornerTopRight {
+    top: 6px;
+    right: 6px;
+    width: 28px;
+    height: 28px;
+  }
+
+  .storyCornerBottomLeft {
+    bottom: 6px;
+    left: 6px;
+    width: 28px;
+    height: 28px;
+  }
+}
+
+@media (max-width: 480px) {
+  .title {
+    font-size: 1.8rem;
+  }
+
+  .imageWrapper {
+    min-height: 320px;
+  }
+
+  .storyFrame {
+    padding: 1.5rem 1.2rem;
+  }
+
+  .storyText {
+    font-size: 0.88rem;
+  }
+
+  .separator {
+    max-width: 240px;
+  }
+}
