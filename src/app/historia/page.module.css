@@ -10,7 +10,6 @@
   padding: 4rem 2rem 6rem;
 }
 
-/* ── Título ── */
 .titleSection {
   text-align: center;
   margin-bottom: 4rem;
@@ -25,7 +24,6 @@
   margin-bottom: 1.5rem;
 }
 
-/* Separador decorativo */
 .separator {
   display: flex;
   align-items: center;
@@ -61,7 +59,6 @@
   line-height: 1;
 }
 
-/* ── Imagem ── */
 .imageWrapper {
   position: relative;
   width: 100%;
@@ -142,7 +139,6 @@
   filter: grayscale(0%) contrast(1) brightness(1);
 }
 
-/* ── Quadro de texto ── */
 .storyFrame {
   position: relative;
   max-width: 780px;
@@ -153,7 +149,6 @@
   background: rgba(193, 154, 107, 0.03);
 }
 
-/* Cantos decorativos do quadro */
 .storyFrame::before,
 .storyFrame::after {
   content: '';
@@ -199,7 +194,6 @@
   border-width: 0 0 1px 1px;
 }
 
-/* Ornamento superior */
 .storyOrnament {
   text-align: center;
   margin-bottom: 1.8rem;
@@ -214,7 +208,6 @@
   font-size: 1.05rem;
   font-weight: 300;
   line-height: 2;
-  color: rgba(255, 255, 255, 0.82);
   text-align: center;
   letter-spacing: 0.01em;
 }
@@ -227,7 +220,6 @@
   margin-bottom: 0;
 }
 
-/* Ornamento inferior */
 .storyOrnamentBottom {
   text-align: center;
   margin-top: 1.8rem;
@@ -237,7 +229,6 @@
   line-height: 1;
 }
 
-/* ── Responsive ── */
 @media (max-width: 768px) {
   .main {
     padding: 2.5rem 1.2rem 4rem;
