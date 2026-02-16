@@ -210,9 +210,9 @@
 }
 
 .storyText {
-  font-family: var(--font-playfair);
+  font-family: var(--font-montserrat);
   font-size: 1.05rem;
-  font-weight: 400;
+  font-weight: 300;
   line-height: 2;
   color: rgba(255, 255, 255, 0.82);
   text-align: center;
