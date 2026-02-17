@@ -18,21 +18,6 @@ export default function Historia() {
             </div>
           </section>
 
-          <div className={styles.imageFrame}>
-            <span className={styles.cornerTopRight} />
-            <span className={styles.cornerBottomLeft} />
-            <div className={styles.imageWrapper}>
-              <Image
-                className={styles.image}
-                src="/nossa-01.jpeg"
-                alt="Mirelly e Hygor - Nossa História"
-                fill
-                sizes="(max-width: 768px) 100vw, 720px"
-                priority
-              />
-            </div>
-          </div>
-
           <div className={styles.storyFrame}>
             <span className={styles.storyCornerTopRight} />
             <span className={styles.storyCornerBottomLeft} />

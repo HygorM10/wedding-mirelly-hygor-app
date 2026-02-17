@@ -1,5 +1,5 @@
 import { notFound } from 'next/navigation';
 
-export default function Evento() {
+export default function Recepcao() {
   notFound();
 }

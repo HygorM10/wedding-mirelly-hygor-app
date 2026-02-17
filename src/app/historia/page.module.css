@@ -1,13 +1,16 @@
 .page {
   min-height: 100vh;
-  background: #000;
+  background: url('/nossa-01.jpeg') center/cover no-repeat;
   padding-top: 80px;
+  position: relative;
 }
 
 .main {
   max-width: 1100px;
   margin: 0 auto;
   padding: 4rem 2rem 6rem;
+  position: relative;
+  z-index: 2;
 }
 
 .titleSection {
@@ -16,9 +19,9 @@
 }
 
 .title {
-  font-family: var(--font-playfair);
+  font-family: var(--font-montserrat);
   font-size: 3.2rem;
-  font-weight: 400;
+  font-weight: 300;
   letter-spacing: 0.08em;
   color: #fff;
   margin-bottom: 1.5rem;
@@ -39,79 +42,33 @@
   background: linear-gradient(
     90deg,
     transparent,
-    rgba(193, 154, 107, 0.6),
-    rgba(193, 154, 107, 0.9)
+    rgba(255,255,255,0.6),
+    rgba(255,255,255,0.9)
   );
 }
 
 .separatorLine:last-child {
   background: linear-gradient(
     90deg,
-    rgba(193, 154, 107, 0.9),
-    rgba(193, 154, 107, 0.6),
+    rgba(255,255,255,0.9),
+    rgba(255,255,255,0.6),
     transparent
   );
 }
 
 .separatorIcon {
   font-size: 1.1rem;
-  color: rgba(193, 154, 107, 0.85);
+  color: #fff;
   line-height: 1;
 }
 
-.imageWrapper {
-  position: relative;
-  width: 100%;
-  margin: 0;
-  margin: 0 auto;
-  min-height: 500px;
-  border-radius: 6px;
-  overflow: hidden;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-/* Moldura externa decorativa */
-.imageFrame {
-  position: relative;
-  max-width: 780px;
-  margin: 0 auto 4rem;
-  padding: 12px;
-  border: 1px solid rgba(193, 154, 107, 0.25);
-  border-radius: 4px;
-  background: rgba(193, 154, 107, 0.03);
-}
-
-.imageFrame::before,
-.imageFrame::after {
-  content: '';
-  position: absolute;
-  width: 40px;
-  height: 40px;
-  border-color: rgba(193, 154, 107, 0.5);
-  border-style: solid;
-  pointer-events: none;
-}
-
-.imageFrame::before {
-  top: 8px;
-  left: 8px;
-  border-width: 1px 0 0 1px;
-}
-
-.imageFrame::after {
-  bottom: 8px;
-  right: 8px;
-  border-width: 0 1px 1px 0;
-}
 
 .cornerTopRight,
 .cornerBottomLeft {
   position: absolute;
   width: 40px;
   height: 40px;
-  border-color: rgba(193, 154, 107, 0.5);
+  border-color: rgba(53, 52, 52, 0.85);
   border-style: solid;
   pointer-events: none;
 }
@@ -144,20 +101,22 @@
   max-width: 780px;
   margin: 0 auto;
   padding: 3rem 3.5rem;
-  border: 1px solid rgba(193, 154, 107, 0.25);
-  border-radius: 4px;
-  background: rgba(193, 154, 107, 0.03);
+  border-radius: 16px;
+  background: rgba(40, 40, 48, 0.92);
+  box-shadow: 0 4px 32px 0 rgba(0,0,0,0.12);
+  border: none;
+  backdrop-filter: blur(2px);
 }
 
-.storyFrame::before,
-.storyFrame::after {
-  content: '';
-  position: absolute;
-  width: 40px;
-  height: 40px;
-  border-color: rgba(193, 154, 107, 0.5);
-  border-style: solid;
-  pointer-events: none;
+ .storyFrame::before,
+ .storyFrame::after {
+   content: '';
+   position: absolute;
+   width: 40px;
+   height: 40px;
+   border-color: #fff;
+   border-style: solid;
+   pointer-events: none;
 }
 
 .storyFrame::before {
@@ -177,45 +136,57 @@
   position: absolute;
   width: 40px;
   height: 40px;
-  border-color: rgba(193, 154, 107, 0.5);
+  border-color: rgba(53, 52, 52, 0.85);
   border-style: solid;
   pointer-events: none;
 }
 
-.storyCornerTopRight {
-  top: 8px;
-  right: 8px;
-  border-width: 1px 1px 0 0;
-}
+ .storyCornerTopRight {
+   position: absolute;
+   width: 40px;
+   height: 40px;
+   border-color: #fff;
+   border-style: solid;
+   pointer-events: none;
+   top: 8px;
+   right: 8px;
+   border-width: 1px 1px 0 0;
+ }
 
-.storyCornerBottomLeft {
-  bottom: 8px;
-  left: 8px;
-  border-width: 0 0 1px 1px;
-}
+ .storyCornerBottomLeft {
+   position: absolute;
+   width: 40px;
+   height: 40px;
+   border-color: #fff;
+   border-style: solid;
+   pointer-events: none;
+   bottom: 8px;
+   left: 8px;
+   border-width: 0 0 1px 1px;
+ }
 
 .storyOrnament {
   text-align: center;
   margin-bottom: 1.8rem;
   font-size: 1.4rem;
-  color: rgba(193, 154, 107, 0.6);
+  color: #fff;
   letter-spacing: 0.5em;
   line-height: 1;
 }
 
 .storyText {
   font-family: var(--font-montserrat);
-  font-size: 1.05rem;
-  font-weight: 300;
-  line-height: 2;
+  font-size: 1.15rem;
+  font-weight: 400;
+  line-height: 2.1;
   text-align: center;
   letter-spacing: 0.01em;
+  color: #fff;
 }
 
 .storyText p {
   margin-bottom: 1.5rem;
 }
-
 .storyText p:last-child {
   margin-bottom: 0;
 }
@@ -224,7 +195,7 @@
   text-align: center;
   margin-top: 1.8rem;
   font-size: 1.4rem;
-  color: rgba(193, 154, 107, 0.6);
+  color: #fff;
   letter-spacing: 0.5em;
   line-height: 1;
 }
@@ -240,11 +211,14 @@
 
   .storyFrame {
     padding: 2rem 1.5rem;
+    border-radius: 12px;
+    background: rgba(40, 40, 48, 0.92);
   }
 
   .storyText {
-    font-size: 0.95rem;
+    font-size: 1rem;
     line-height: 1.9;
+    color: #fff;
   }
 
   .imageFrame {
@@ -295,10 +269,13 @@
 
   .storyFrame {
     padding: 1.5rem 1.2rem;
+    border-radius: 8px;
+    background: rgba(40, 40, 48, 0.92);
   }
 
   .storyText {
-    font-size: 0.88rem;
+    font-size: 0.92rem;
+    color: #fff;
   }
 
   .separator {

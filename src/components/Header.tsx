@@ -31,8 +31,8 @@ export default function Header() {
         </Link>
         
         <nav className={styles.nav}>
-          <Link href="/evento" className={styles.navLink}>
-            O EVENTO
+          <Link href="/cerimonia" className={styles.navLink}>
+            A CERIMÔNIA
           </Link>
           {/* <Link href="#lista-presentes" className={styles.navLink}>
             LISTA DE PRESENTES
@@ -42,6 +42,9 @@ export default function Header() {
           </Link>
           <Link href="/galeria" className={styles.navLink}>
             GALERIA 
+          </Link>
+          <Link href="/recepcao" className={styles.navLink}>
+            A RECEPÇÃO
           </Link>
           {/* <Link href="#galeria" className={styles.navLink}>
             CONFIRMAR PRESENÇA
@@ -60,8 +63,11 @@ export default function Header() {
 
         <div className={`${styles.mobileMenu} ${isMenuOpen ? styles.mobileMenuOpen : ''}`}>
           <nav className={styles.mobileNav}>
-            <Link href="/evento" className={styles.mobileNavLink} onClick={closeMenu}>
-              O EVENTO
+            <Link href="/" className={styles.mobileNavLink} onClick={closeMenu}>
+              INÍCIO
+            </Link>
+            <Link href="/cerimonia" className={styles.mobileNavLink} onClick={closeMenu}>
+              A CERIMÔNIA
             </Link>
             <Link href="/historia" className={styles.mobileNavLink} onClick={closeMenu}>
               HISTÓRIA DO CASAL
@@ -69,9 +75,11 @@ export default function Header() {
             <Link href="/galeria" className={styles.mobileNavLink} onClick={closeMenu}>
               GALERIA
             </Link>
+            <Link href="/recepcao" className={styles.mobileNavLink} onClick={closeMenu}>
+              A RECEPÇÃO
+            </Link>
           </nav>
         </div>
-
         {/* <Link href="#confirmar-presenca" className={styles.ctaButton}>
           PRESENÇA
         </Link> */}

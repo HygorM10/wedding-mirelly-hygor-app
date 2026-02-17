@@ -108,6 +108,15 @@
   }
 }
 
+@media (min-width: 769px) and (max-width: 1024px) {
+  .heroImage {
+    right: 1.5rem !important;
+    bottom: 1.5rem !important;
+    width: calc(100% - 2.5rem) !important;
+    height: calc(100% - 1.5rem) !important;
+  }
+}
+
 @media (max-width: 768px) {
   .heroSection {
     grid-template-columns: 1fr;
@@ -145,6 +154,10 @@
   
   .heroImageContainer {
     min-height: 35vh;
+    padding-bottom: 2rem;
+  }
+  .heroImage {
+    padding-right: 1rem;
   }
 }
 
